@@ -43,13 +43,13 @@ public class operation_signe {
         System.out.println("str1等于str2：" + (str1 == str2));
 
         //基本逻辑运算符
-        boolean a = true; // a同意
-        boolean b = false; // b反对
+        boolean a1 = true; // a同意
+        boolean b1 = false; // b反对
         boolean c = false; // c反对
         boolean d = true; // d同意
-        System.out.println((a && b) + "未通过");
-        System.out.println((a || b) + "通过");
-        System.out.println((!a) + "未通过");
+        System.out.println((a1 && b1) + "未通过");
+        System.out.println((a1 || b1) + "通过");
+        System.out.println((!a1) + "未通过");
         System.out.println((c ^ d) + "通过");
 
         //三元运算符
@@ -64,5 +64,80 @@ public class operation_signe {
         System.out.println("m:" + m);
         System.out.println("n:" + n);
         System.out.println("x:" + x);
-	}
+
+        int i = 1; // 代表 1 - 5 之间的数字
+		// 当变量小于等于 5 时执行循环
+		while (i <= 5) {
+			// 输出变量的值，并且对变量加 1，以便于进行下次循环条件判断
+			System.out.println(i);
+            i++;
+        }
+
+        int s = 0; // 保存 1-50 之间偶数的和
+        int num = 2; // 代表 1-50 之间的偶数
+        do {
+            s += num;// 实现累加求和
+            num = num + 2; // 每执行一次将数值加2，以进行下次循环条件判断
+        } while (num <= 50); // 满足数值在 1-50 之间时重复执行循环
+        System.out.println("50以内的偶数之和为" + s);
+
+        int su = 0; // 保存不能被3整除的数之和
+        // 循环变量 i 初始值为 1 ,每执行一次对变量加 1，只要小于等于 100 就重复执行循环
+        for (int i1 = 1; i1 <= 100; i1++) {
+            // 变量 i 与 3 进行求模（取余），如果不等于 0 ，则表示不能被 3 整除
+            if (i1 % 3 != 0) {
+                su = su + i1; // 累加求和
+            }
+        }
+
+        // 保存累加值
+        int summa = 0;
+        // 从1循环到10
+        for (int i2 = 1; i2 <= 10; i2++) {
+            // 每次循环时累加求和
+            summa = summa + i2;
+            // 判断累加值是否大于20，如果满足条件则退出循环
+            if (summa > 20) {
+                System.out.print("当前的累加值为:" + summa);
+                break;
+                // 退出循环
+
+            }
+        }
+
+        int somme = 0; // 保存累加值
+        for (int i3 = 1; i3 <= 10; i3++) {
+            // 如果i为奇数,结束本次循环，进行下一次循环
+            if (i3 % 2 != 0) {
+                continue;
+            }
+            somme = somme + i3;
+        }
+        System.out.print("1到10之间的所有偶数的和为：" + somme);
+
+        System.out.println("打印直角三角形");
+
+        // 外层循环控制行数
+        for (int i4 = 1; i4 <= 3; i4++) {
+            // 内层循环控制每行的*号数
+            // 内层循环变量的最大值和外层循环变量的值相等
+            for (int j = 1; j <= i4; j++) {
+                System.out.print("*");
+            }
+            // 每打印完一行后进行换行
+            System.out.println();
+        }
+
+        int number = 999;
+        int count = 0;
+        if (num >= 0 && number <= 999999999) {
+            while (number != 0) {
+                count++;
+                number /= 10;
+            }
+            System.out.println("它是个" + count + "位的数！");
+        } else {
+            System.out.println("输入有误");
+        }
+    }
 }
