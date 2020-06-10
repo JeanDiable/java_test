@@ -130,6 +130,7 @@ public class operation_signe {
 
         int number = 999;
         int count = 0;
+        //直接对函数值进行除法，每次成功进行除法则位数+1.
         if (num >= 0 && number <= 999999999) {
             while (number != 0) {
                 count++;
@@ -139,5 +140,31 @@ public class operation_signe {
         } else {
             System.out.println("输入有误");
         }
+
+        int num5 = 697;
+        int uni = 100000000;
+        /*以一亿为初始值，对输入值做除法，
+        若四舍五入后为0则表示小于一亿，
+        将单位降为一千万，重复除法操作，直至找到不为0的值*/
+        for (int count5 = 9; count5 >= 1; count5--) {
+            if (num5 / uni != 0){
+                System.out.println("它是个" + count5 + "位的数！");
+                break;
+            }else{
+                uni /= 10;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
