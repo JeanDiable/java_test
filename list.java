@@ -81,6 +81,7 @@ public class list {
         Arrays.sort(scores1);
 
         // 使用foreach遍历输出数组中的元素
+        //类似python的for循环
         for (int score : scores1) {
             System.out.println(score);
         }
