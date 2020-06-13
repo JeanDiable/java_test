@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class fonction {
     /**
      * 所谓方法，就是用来解决一类问题的代码的有序组合，是一个功能模块。
@@ -34,6 +36,7 @@ public class fonction {
 
         double avg = hello.calcAvg();
         System.out.println("平均成绩是 " + avg);
+
     }
 
     /**
@@ -51,7 +54,7 @@ public class fonction {
      * 例如：在下面的代码中，我们创建了一个名为 hello 的对象，然后通过调用该对象的 showMyLove( ) 方法输出信息
      */
 
-     public void showMyLove() {
+    public void showMyLove() {
         System.out.println("我爱慕课网!");
     }
 
@@ -73,5 +76,11 @@ public class fonction {
         double avg = (java + php) / 2; // 计算平均值
         // 使用return返回值
         return avg;
+    }
+
+    /*
+     * 功能：将考试成绩排序并输出，返回成绩的个数 定义一个包含整型数组参数的方法，传入成绩数组 使用Arrays类对成绩数组进行排序并输出
+     * 方法执行后返回数组中元素的个数
+     */
     }
 }
