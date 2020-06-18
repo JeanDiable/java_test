@@ -1,0 +1,30 @@
+ 构造方法：
+ 1：用new+构造方法 创建一个新对象
+ 2：构造方法是定义在java类中的一个用来初始化对象的方法
+ 3：构造方法与类名相同且没有返回值
+
+ public 构造方法名(){
+     //初始化代码
+ }
+
+ 无参数构造方法：
+ main():
+  Telphone phone = new Telphone();
+class Telphone:
+  public Telphone(){
+      System.out.println(111);
+  }
+
+有参数构造方法：
+ main():
+  Telphone phone2 = new Telphone(4.0f,2.0f,2.0f);
+class Telphone:
+  public Telphone(float newScreen, floeat newCPU, float newMem){
+      screen = newScreen;
+      CPU = newCPU;
+      Mem = newMem;
+  }
+
+当没有构造方法时，系统会自动添加构造方法
+
+只要有指定的构造方法（无论是否有参），系统就不会自动添加构造方法
